@@ -1,0 +1,28 @@
+[project]
+name = "exelanalitik"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name", email = "you@example.com"}
+]
+requires-python = ">=3.12,<3.16"
+dependencies = [
+    "customtkinter (>=5.2.2,<6.0.0)",
+    "pandas (>=2.2.0,<3.0.0)",
+    "openpyxl (>=3.1.2,<4.0.0)"
+]
+
+[project.scripts]
+start-app = "real_estate_finder.main:run"
+
+[tool.poetry]
+packages = [{include = "real_estate_finder", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pyinstaller (>=6.22.3,<7.0.0)"
+]
